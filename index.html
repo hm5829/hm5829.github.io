@@ -1,15 +1,27 @@
+<!DOCTYPE html>
 <html>
 <head>
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <meta charset=utf-8>
    <title>webtest</title>
-   <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script>
-  $(document).ready(function() {
-  $('p').addClass("animated shake");
-  });
-</script>
-
-</head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.js"></script>
+   <script>
+        $(document).ready(function () {
+	$('h1').hide();
+	 $('p').hide();
+	 $('a').hide();	 
+    });
+        $("#close").click(function(){
+        $('p').fadeOut(2000);
+	$('a').fadeOut(2000);
+	$('h1').fadeOut(2000);
+    });
+        $("#open").click(function(){
+	$('p').slidedown(2000);
+	$('a').slidedown(2000);
+	$('h1').slidedown(2000);
+    });
+    </script>
+    </head>
    <style>
     h1{
       color: SeaGreen
@@ -24,6 +36,12 @@
       img{
         border-radius: 100%;
       }
+   .button-border{
+		 color:blue;
+		 border-width:0px;
+    	 background-color:skyblue; 
+   		 border-radius: 25%;
+	}
     </style>
     
 
@@ -32,5 +50,15 @@
   <h1>醫資一 405570094 林玠呈</h1>
   <p>大家好，這是我第一個自己製作的網頁</p>
   <a href="http://www.haotu.net/up/3994/512/22-smile.png" style=text-align:center;>了解更多</a></div>
+<table class="button-space" border="3">
+		<tr>
+			<td>
+				<button id="close" class="content-set button-border">CLOSE</button>
+			</td>
+			<td>
+				<button id="open" class="content-set button-border">OPEN</button>
+			</td>
+		</tr>
+	</table>
 </body>
 </html>
